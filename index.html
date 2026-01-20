@@ -1,11 +1,266 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Enter Robotics</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <h1>Enter Robotics</h1>
-    <p>Coming Soon</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Robotics - AI-Powered HVAC Design Automation</title>
+    <meta name="description" content="Convert HVAC drawings 10x faster with AI. Professional DWG conversion at a fraction of the cost." />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Analytics Config (set these before analytics.js loads) -->
+    <script>
+      // Configure analytics - replace with your actual keys
+      window.POSTHOG_API_KEY = '';  // Get from posthog.com
+      window.PLAUSIBLE_DOMAIN = 'enterrobotics.com';
+      window.ANALYTICS_PROVIDER = 'both';
+      window.ANALYTICS_DEBUG = true;  // Set to false in production
+    </script>
+
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%);
+      }
+      .cta-gradient {
+        background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+      }
+      .model-viewer {
+        display: none;
+        width: 100%;
+        height: 500px;
+        margin-top: 20px;
+      }
+      .model-viewer.active {
+        display: block;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DrwMo4hj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CiQGt2eT.css">
+  </head>
+  <body class="bg-gray-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <span class="text-xl font-bold text-white">Enter Robotics</span>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+            <a href="#demo" class="text-gray-300 hover:text-white transition">Demo</a>
+            <a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+            <a href="#cta" class="cta-gradient px-4 py-2 rounded-lg font-medium hover:opacity-90 transition" onclick="analytics.ctaClicked('nav', 'start-trial')">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4">
+      <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Convert HVAC Drawings<br/>
+          <span class="text-blue-400">10x Faster with AI</span>
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Stop wrestling with buggy, overpriced CAD tools. Our AI-powered converter handles DWG files in seconds, not hours.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#pricing" class="cta-gradient px-8 py-4 rounded-lg text-lg font-medium hover:opacity-90 transition" onclick="analytics.ctaClicked('hero', 'primary')">
+            Start 14-Day Free Trial
+          </a>
+          <a href="#demo" class="border border-gray-500 px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition" onclick="analytics.ctaClicked('hero', 'secondary')">
+            See It In Action
+          </a>
+        </div>
+        <p class="text-sm text-gray-400 mt-4">No credit card required. Cancel anytime.</p>
+      </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 px-4 bg-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Tired of These Problems?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-700/50 p-6 rounded-xl">
+            <div class="text-red-400 text-4xl mb-4">$$$</div>
+            <h3 class="text-xl font-semibold mb-2">Overpriced Tools</h3>
+            <p class="text-gray-400">Paying $100+/month for software that crashes half the time? There's a better way.</p>
+          </div>
+          <div class="bg-gray-700/50 p-6 rounded-xl">
+            <div class="text-red-400 text-4xl mb-4">&#x23F1;</div>
+            <h3 class="text-xl font-semibold mb-2">Manual Conversion Hell</h3>
+            <p class="text-gray-400">Hours spent manually converting drawings that should take minutes.</p>
+          </div>
+          <div class="bg-gray-700/50 p-6 rounded-xl">
+            <div class="text-red-400 text-4xl mb-4">&#x1F41B;</div>
+            <h3 class="text-xl font-semibold mb-2">Buggy Software</h3>
+            <p class="text-gray-400">Constant errors, missing elements, and having to redo work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Why Enter Robotics?</h2>
+        <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">AI-powered automation that just works. No learning curve, no frustration.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-6 border border-gray-700 rounded-xl hover:border-blue-500 transition">
+            <div class="text-blue-400 text-3xl mb-4">&#x26A1;</div>
+            <h3 class="text-xl font-semibold mb-2">10x Faster Processing</h3>
+            <p class="text-gray-400">AI analyzes and converts drawings in seconds instead of hours.</p>
+          </div>
+          <div class="p-6 border border-gray-700 rounded-xl hover:border-blue-500 transition">
+            <div class="text-blue-400 text-3xl mb-4">&#x2714;</div>
+            <h3 class="text-xl font-semibold mb-2">99% Accuracy</h3>
+            <p class="text-gray-400">Smart recognition preserves all elements - no missing components.</p>
+          </div>
+          <div class="p-6 border border-gray-700 rounded-xl hover:border-blue-500 transition">
+            <div class="text-blue-400 text-3xl mb-4">&#x1F4B0;</div>
+            <h3 class="text-xl font-semibold mb-2">70% Cheaper</h3>
+            <p class="text-gray-400">Professional results at a fraction of enterprise tool prices.</p>
+          </div>
+          <div class="p-6 border border-gray-700 rounded-xl hover:border-blue-500 transition">
+            <div class="text-blue-400 text-3xl mb-4">&#x2601;</div>
+            <h3 class="text-xl font-semibold mb-2">Cloud-Based</h3>
+            <p class="text-gray-400">Access from anywhere. No installation, no IT headaches.</p>
+          </div>
+          <div class="p-6 border border-gray-700 rounded-xl hover:border-blue-500 transition">
+            <div class="text-blue-400 text-3xl mb-4">&#x1F512;</div>
+            <h3 class="text-xl font-semibold mb-2">Secure & Private</h3>
+            <p class="text-gray-400">Your files are encrypted and never shared. SOC 2 compliant.</p>
+          </div>
+          <div class="p-6 border border-gray-700 rounded-xl hover:border-blue-500 transition">
+            <div class="text-blue-400 text-3xl mb-4">&#x1F4DE;</div>
+            <h3 class="text-xl font-semibold mb-2">Real Support</h3>
+            <p class="text-gray-400">Founder-led support. Get answers in hours, not days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section (3D Model Viewer) -->
+    <section id="demo" class="py-20 px-4 bg-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">See Our Technology</h2>
+        <p class="text-gray-400 text-center mb-12">Interactive 3D preview of our robotics projects</p>
+        <div class="bg-gray-700/50 rounded-xl p-8">
+          <div id="overlay" class="overlay">
+            <div class="project-list flex flex-wrap gap-4 justify-center">
+              <div class="project-item cursor-pointer bg-gray-600 p-4 rounded-lg hover:bg-gray-500 transition" data-model="mantis_rob_tube">
+                <img src="/assets/mantis_rob_tube-BFhHccJr.png" alt="Mantis Robotic Arm" class="w-32 h-32 object-contain" onerror="this.style.display='none'" />
+                <h3 class="text-center mt-2">Mantis Robotic Arm</h3>
+              </div>
+            </div>
+            <div id="model-viewer" class="model-viewer">
+              <model-viewer
+                id="viewer"
+                src="/public/Models/mantis_rob_tube.glb"
+                alt="3D Model"
+                auto-rotate
+                camera-controls
+                style="width: 100%; height: 100%; background: transparent;">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-gray-400 text-center mb-12">Start free. Upgrade when you're ready.</p>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Monthly -->
+          <div class="border border-gray-700 rounded-xl p-8 hover:border-blue-500 transition" onclick="analytics.pricingViewed('monthly')">
+            <h3 class="text-xl font-semibold mb-2">Monthly</h3>
+            <div class="text-4xl font-bold mb-4">$29<span class="text-lg text-gray-400">/mo</span></div>
+            <ul class="space-y-3 mb-8 text-gray-300">
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Unlimited conversions</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>All file formats</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Priority processing</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Email support</li>
+            </ul>
+            <a href="#" class="block w-full text-center border border-blue-500 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500/10 transition">Get Started</a>
+          </div>
+          <!-- Yearly -->
+          <div class="border-2 border-blue-500 rounded-xl p-8 relative" onclick="analytics.pricingViewed('yearly')">
+            <div class="absolute top-0 right-0 bg-blue-500 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">SAVE $58</div>
+            <h3 class="text-xl font-semibold mb-2">Yearly</h3>
+            <div class="text-4xl font-bold mb-4">$290<span class="text-lg text-gray-400">/yr</span></div>
+            <p class="text-sm text-gray-400 mb-4">That's just $24/mo - 2 months free!</p>
+            <ul class="space-y-3 mb-8 text-gray-300">
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Everything in Monthly</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Priority support</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Early access to features</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">&#x2714;</span>Custom integrations</li>
+            </ul>
+            <a href="#" class="block w-full text-center cta-gradient px-6 py-3 rounded-lg hover:opacity-90 transition">Get Started</a>
+          </div>
+        </div>
+        <p class="text-center text-gray-400 mt-8">All plans include a 14-day free trial. No credit card required.</p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 px-4 gradient-bg">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Save Hours Every Week?</h2>
+        <p class="text-xl text-gray-300 mb-8">Join hundreds of HVAC professionals who've switched to faster, smarter design automation.</p>
+        <a href="#" class="inline-block cta-gradient px-8 py-4 rounded-lg text-lg font-medium hover:opacity-90 transition" onclick="analytics.ctaClicked('footer-cta', 'trial')">
+          Start Your Free Trial Now
+        </a>
+        <p class="text-sm text-gray-400 mt-4">14-day trial. No credit card. Cancel anytime.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="font-bold mb-4">Enter Robotics</h4>
+            <p class="text-gray-400 text-sm">AI-powered design automation for HVAC professionals.</p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Product</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li><a href="#features" class="hover:text-white transition">Features</a></li>
+              <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+              <li><a href="#demo" class="hover:text-white transition">Demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Company</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li><a href="#" class="hover:text-white transition">About</a></li>
+              <li><a href="#" class="hover:text-white transition">Contact</a></li>
+              <li><a href="#" class="hover:text-white transition">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Legal</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; 2026 Enter Robotics. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
 </html>
